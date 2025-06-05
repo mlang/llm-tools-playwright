@@ -1,0 +1,15 @@
+[project]
+name = "llm-tools-playwright"
+version = "0.1"
+description = "A tool plugin for LLM to enable browsing with Playwright"
+license = "MIT"
+authors = [
+    { name = "Mario Lang", email = "mlang@blind.guru" }
+]
+dependencies = [
+    "llm>=0.26",
+    "playwright",
+]
+
+[project.entry-points.llm]
+llm_tools_playwright = "llm_tools_playwright"
