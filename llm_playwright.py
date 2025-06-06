@@ -1,9 +1,12 @@
+import atexit
+
 import llm
 from playwright.sync_api import sync_playwright
 from pydantic import HttpUrl
 
 
 playwright = sync_playwright().start()
+atexit.register(playwright.stop)
 
 
 class Browser(llm.Toolbox):
